@@ -1,6 +1,9 @@
-# FJU EAT (English)
+
+# FJU EAT 
 
 FJU EAT: Food & Restaurant Finder Near Fu Jen Catholic University
+
+web is live at:https://crazyainfuture.github.io/fjufindfood/
 
 ## Introduction
 

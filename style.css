@@ -169,3 +169,92 @@ button:hover {
     color: #666;
     margin-bottom: 10px;
 }
+
+/* 進階 RWD: 平板與手機最佳化 */
+@media (max-width: 900px) {
+  #restaurantList {
+    max-width: 100%;
+    gap: 10px;
+  }
+  #restaurantList li {
+    width: 45vw;
+    min-width: 150px;
+    max-width: 95vw;
+    font-size: 1rem;
+    padding: 12px;
+  }
+  #controls {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 95vw;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 8px;
+  }
+  h1 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  #restaurantList {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 2px;
+  }
+  #restaurantList li {
+    width: 98vw;
+    min-width: 0;
+    font-size: 0.98rem;
+    padding: 10px 5px;
+  }
+  #selected {
+    font-size: 1rem;
+    padding: 10px 5px;
+  }
+  #controls {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100vw;
+    margin-bottom: 10px;
+  }
+  select, input[type="text"], button {
+    width: 100%;
+    margin: 4px 0;
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
+}
+
+/* 讓 controls 區塊在桌機也能橫向排列，手機自動直向 */
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+  #controls {
+    flex-direction: column;
+    gap: 4px;
+    align-items: stretch;
+  }
+}
+
+/* 讓搜尋欄與按鈕在小螢幕不會擠在一起 */
+@media (max-width: 400px) {
+  #restaurantList li {
+    font-size: 0.92rem;
+    padding: 7px 2px;
+  }
+  #selected {
+    font-size: 0.95rem;
+    padding: 7px 2px;
+  }
+}

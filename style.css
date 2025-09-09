@@ -1,0 +1,171 @@
+/* styles.css */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* 整體背景 */
+body {
+  background-color: #f5f5f5; /* 淺灰底 */
+  color: #003366; /* 輔大深藍文字 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 標題 */
+h1 {
+  font-size: 2.5rem;
+  color: #003366; /* 深藍 */
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* 地圖區塊 */
+#map {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+/* 下拉選單與輸入框 */
+select, input[type="text"] {
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 8px;
+  border: 1px solid #003366;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+select:focus, input[type="text"]:focus {
+  border-color: #FFCC00; /* 金色聚焦 */
+  box-shadow: 0 0 5px rgba(255,204,0,0.4);
+}
+
+
+
+/* 按鈕 */
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #003366; /* 深藍 */
+  color: #FFCC00; /* 金色字 */
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #002244; /* 更深的藍 */
+  transform: translateY(-2px);
+}
+
+/* 餐廳列表 */
+#restaurantList {
+  list-style: none;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 15px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+#restaurantList li {
+  background-color: #e6f0ff;
+  color: #003366;
+  width: 200px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  position: relative;
+}
+
+#restaurantList li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  background-color: #cce0ff;
+}
+/* 隱藏連結底線，讓卡片看起來像普通卡片 */
+#restaurantList a {
+  text-decoration: none; /* 移除底線 */
+  color: inherit;        /* 繼承父元素文字顏色 */
+  display: inline-block; /* 讓 a 包住整個卡片 */
+}
+
+/* 避免 hover 時文字顏色變藍 */
+#restaurantList a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* 類型 & 距離標籤 */
+.label {
+  display: inline-block;
+  margin: 5px 2px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #0b0904;
+}
+
+.info {
+  color: #100e03; 
+  font-size: 0.85rem;
+}
+/* 詳細資訊顯示區 */
+#selected {
+  display: none; /* 初始隱藏 */
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  min-height: 60px;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: #FFCC00; /* 金色底 */
+  color: #003366; /* 深藍文字 */
+  text-align: center;
+}
+
+
+
+
+
+/* 響應式 */
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  select, input[type="text"], button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+
+#writer {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}

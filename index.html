@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>FJU EAT</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.counter.dev/script.js" data-id="27956a3b-60c1-44b9-86ee-889c2f765449" data-utcoffset="8"></script>
+</head>
+<body>
+    <h1>FJU EAT</h1>
+    <div id="writer">
+        <p>點擊店名查看地址與菜單</p>
+        <p>by XT</p>
+    </div>
+ 
+    <div id="controls">
+        <select id="cuisineSelect">
+            <option value="">類型</option>
+            <option value="早餐">早餐</option>
+            <option value="午餐,晚餐">午餐或晚餐</option>
+            <option value="酒吧">酒吧</option>
+            <option value="咖啡廳">咖啡廳</option>
+            <option value="飲料">飲料/手搖</option>
+            <option value="甜點">甜點</option>
+        </select>
+
+        <select id="distance">
+            <option value="">距離</option>
+            <option value="300">300公尺內</option>
+            <option value="500">500公尺內</option>
+            <option value="600">600公尺內</option>
+            <option value="700">700公尺內</option>
+            <option value="2000">很遠</option>
+        </select>
+
+        <select id="areaSelect">
+            <option value="">地區</option>
+            <option value="514巷">514巷</option>
+            <option value="中正路">中正路</option>
+            <option value="建國一路">建國一路</option>
+        </select>
+
+        <input type="text" id="searchInput" placeholder="搜尋餐廳">
+        <button id="searchBtn">搜尋 🔍</button>
+
+        <button id="randomBtn">不知道要吃什麼ㄟ幫我選餐廳 🍽️</button>
+    </div>
+
+
+    
+
+    <ul id="restaurantList"></ul>
+    <p id="selected"></p>
+
+    
+    
+    <script src="script.js"></script>
+  
+</body>
+</html>

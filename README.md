@@ -1,4 +1,3 @@
-
 # FJU EAT (English)
 
 FJU EAT: Food & Restaurant Finder Near Fu Jen Catholic University

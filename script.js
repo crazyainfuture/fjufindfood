@@ -7,7 +7,17 @@ const cuisineSelect = document.getElementById("cuisineSelect");
 const distanceSelect = document.getElementById("distance");
 
 const restaurants = [
+//300
+  { "name": "橘子早餐店", "type": "早餐", "distance": 300, "info": "早餐店", "area": "理園" },
+  { "name": "阿珠媽", "type": "午餐", "distance": 300, "info": "韓式", "area": "理園" },
   { "name": "熊賀炒飯", "type": "晚餐", "distance": 300, "info": "炒飯", "area": "理園" },
+//350
+  { "name": "誠園學餐", "type": "午餐", "distance": 350, "info": "早餐午餐都有", "area": "誠園" },
+
+//450
+  { "name": "心園自助餐", "type": "晚餐", "distance": 450, "info": "自助餐/飲料/鬆餅", "area": "心園" },
+  { "name": "輔園學餐", "type": "午餐", "distance": 450, "info": "韓式/便當/滷味/手搖/八方", "area": "輔園" },
+//500
   { "name": "愛玉早餐店", "type": "早餐", "distance": 500, "info": "早餐店", "area": "514巷小路進去" },
   { "name": "麵頑者", "type": "午餐", "distance": 500, "info": "拉麵", "area": "514巷" },
   { "name": "芊苡號", "type": "午餐", "distance": 500, "info": "便當", "area": "514巷" },
@@ -41,13 +51,38 @@ const restaurants = [
   { "name": "劉家涼麵", "type": "午餐", "distance": 500, "info": "涼麵", "area": "514巷小路走進去" },
   { "name": "三舅媽的店", "type": "午餐", "distance": 500, "info": "中式", "area": "514巷小路走進去" },
   { "name": "Honey bar", "type": "酒吧", "distance": 500, "info": "酒吧", "area": "514巷" },
+  { "name": "Blue磚塊義大利麵", "type": "午餐", "distance": 500, "info": "義大利麵", "area": "514巷" },
+  { "name": "名廚鐵板燒", "type": "午餐", "distance": 550, "info": "鐵板燒", "area": "建國一路" },
+  { "name": "12MINI快煮鍋", "type": "午餐", "distance": 550, "info": "火鍋", "area": "建國一路" },
+  { "name": "老虎溫州大餛飩", "type": "午餐", "distance": 550, "info": "中式", "area": "中正路" },
+  { "name": "摩斯漢堡", "type": "午餐", "distance": 550, "info": "速食", "area": "中正路" },
+  { "name": "肯德基KFC", "type": "午餐", "distance": 550, "info": "速食", "area": "中正路" },
+  
+//600
+  { "name": "50嵐", "type": "飲料", "distance": 600, "info": "手搖", "area": "建國一路" },
+  { "name": "樹林大衆牛排", "type": "午餐", "distance": 600, "info": "牛排", "area": "中正路" },
+  { "name": "粥大福 ", "type": "午餐", "distance": 600, "info": "粥", "area": "中正路" },
   { "name": "夯麵坊輔大店", "type": "午餐", "distance": 600, "info": "義大利麵", "area": "建國一路" },
+  { "name": "魚多甜", "type": "午餐", "distance": 600, "info": "日式料理", "area": "建國一路" },
+  { "name": "官小二酸菜魚", "type": "午餐", "distance": 600, "info": "酸菜魚", "area": "建國一路" },
+  { "name": "川湘閣重慶酸菜魚", "type": "午餐", "distance": 600, "info": "酸菜魚", "area": "建國一路" },
   { "name": "靴子義大利餐館 輔大店", "type": "晚餐", "distance": 600, "info": "義大利麵", "area": "中正路" },
   { "name": "星巴克", "type": "咖啡廳", "distance": 650, "info": "知名咖啡廳", "area": "中正路" },
   { "name": "MY POKE買買波奇 夏威夷生魚飯", "type": "午餐", "distance": 650, "info": "好像只能外帶", "area": "中正路" },
   { "name": "麥當勞", "type": "午餐", "distance": 650, "info": "速食", "area": "中正路" },
+  { "name": "一沐日", "type": "飲料", "distance": 600, "info": "手搖", "area": "建國一路" },
+  { "name": "阿三哥麵飯", "type": "午餐", "distance": 600, "info": "麵飯都有", "area": "建國一路" },
   { "name": "清心福全", "type": "飲料", "distance": 650, "info": "手搖飲料", "area": "中正路" },
-  { "name": "漢堡王 Burger King", "type": "午餐", "distance": 1900, "info": "速食", "area": "中正路" }
+  //700
+  { "name": "壹三找餐", "type": "早餐", "distance": 700, "info": "早餐", "area": "建國一路" },
+  { "name": "CoCo都可茶飲", "type": "飲料", "distance": 700, "info": "手搖", "area": "建國一路" },
+  { "name": "路易莎", "type": "咖啡廳", "distance": 750, "info": "知名咖啡廳", "area": "建國一路" },
+  { "name": "大三元棋牌娛樂會館", "type": "麻將館", "distance": 800, "info": "買快樂", "area": "中正路" },
+  { "name": "粒古LetGood桌遊館", "type": "麻將館", "distance": 800, "info": "買快樂", "area": "福營路" },
+  { "name": "輔大FUN桌遊", "type": "麻將館", "distance": 800, "info": "買快樂", "area": "中正路" },
+  { "name": "龍揚棋牌社", "type": "麻將館", "distance": 800, "info": "買快樂", "area": "中正路" },
+  { "name": "輔又贏棋牌館", "type": "麻將館", "distance": 800, "info": "買快樂", "area": "中正路" },
+
 ];
 
 
@@ -88,17 +123,17 @@ function filterRestaurants() {
     const matchDistance = maxDistance ? r.distance <= maxDistance : true;
     const matchArea = selectedArea ? r.area === selectedArea : true;
 
-    const excludeDrink = (types.includes("午餐") || types.includes("晚餐")) && r.type === "手搖";
-
-    return matchName && matchType && matchDistance && matchArea && !excludeDrink;
+    return matchName && matchType && matchDistance && matchArea;
   });
 
   renderRestaurants(filtered);
 }
 
 
-// 初始顯示
-renderRestaurants(restaurants);
+
+// 初始顯示 (排除麻將館)
+renderRestaurants(restaurants.filter(r => r.type !== "麻將館"));
+
 
 // 綁定事件
 searchBtn.addEventListener("click", filterRestaurants);
@@ -118,11 +153,10 @@ randomBtn.addEventListener("click", () => {
     const matchType = types.length === 0 || types.includes(r.type);
     const matchDistance = maxDistance ? r.distance <= maxDistance : true;
     const matchArea = selectedArea ? r.area === selectedArea : true;
-    const excludeDrink = 
-      (types.includes("午餐") || types.includes("早餐") || types.includes("晚餐")) 
-      && r.type === "手搖";
+    const excludeDrink = (types.includes("午餐") || types.includes("早餐") || types.includes("晚餐")) && r.type === "手搖";
+    const excludeMahjong = r.type === "麻將館"; // 排除麻將館
 
-    return matchType && matchDistance && matchArea && !excludeDrink;
+    return matchType && matchDistance && matchArea && !excludeDrink && !excludeMahjong;
   });
 
   if (filtered.length === 0) {
